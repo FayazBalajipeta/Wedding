@@ -2638,3 +2638,828 @@ img {
         font-size: 16px;
     }
 }
+
+/* ==========================================
+   NIKAH & WALIMA CARDS - RESPONSIVE DESIGN
+   Royal Plum & Gold
+========================================== */
+
+/* Locations section */
+.locations-section {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 90px 5% 80px;
+    text-align: center;
+    overflow: hidden;
+    scroll-margin-top: 85px;
+}
+
+/* Center the two cards on laptop and desktop */
+.location-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: center;
+    align-items: stretch;
+    gap: 28px;
+}
+
+/* Individual cards */
+.location-card {
+    width: 100%;
+    max-width: 470px;
+    min-width: 0;
+    min-height: 590px;
+    margin: 0 auto;
+    padding: 38px 25px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(
+        145deg,
+        #38243B,
+        #201522
+    );
+
+    border: 1px solid #8D705B;
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    border-color: #D8B477;
+}
+
+/* Card headings */
+.location-card h3 {
+    font-size: clamp(25px, 2.2vw, 32px);
+    line-height: 1.3;
+    margin: 20px 0 12px;
+}
+
+/* QR code frame */
+.qr-frame {
+    width: 170px;
+    height: 170px;
+    max-width: 70%;
+    margin: 32px auto 20px;
+    padding: 8px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #FFFFFF;
+    border-radius: 3px;
+}
+
+.qr-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* QR description */
+.location-card p {
+    line-height: 1.7;
+    overflow-wrap: break-word;
+}
+
+/* Location buttons */
+.location-button {
+    margin-top: auto;
+    margin-bottom: 0;
+    max-width: 100%;
+    text-align: center;
+    white-space: normal;
+}
+
+/* Footer message */
+.locations-footer {
+    margin: 40px auto 0;
+    max-width: 750px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   TABLET VIEW
+========================================== */
+
+@media screen and (max-width: 900px) {
+    .locations-section {
+        padding: 75px 5%;
+    }
+
+    .location-container {
+        max-width: 760px;
+        gap: 20px;
+    }
+
+    .location-card {
+        min-height: 560px;
+        padding: 32px 18px;
+    }
+
+    .qr-frame {
+        width: 155px;
+        height: 155px;
+    }
+}
+
+/* ==========================================
+   MOBILE VIEW
+========================================== */
+
+@media screen and (max-width: 600px) {
+    .locations-section {
+        padding: 65px 6%;
+    }
+
+    .location-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 420px;
+        gap: 24px;
+        margin: 32px auto 0;
+    }
+
+    .location-card {
+        width: 100%;
+        max-width: 100%;
+        min-height: 520px;
+        padding: 32px 20px;
+    }
+
+    .location-card h3 {
+        font-size: 27px;
+    }
+
+    .qr-frame {
+        width: 165px;
+        height: 165px;
+        margin-top: 28px;
+    }
+
+    .location-button {
+        margin-top: 28px;
+        padding: 13px 18px;
+    }
+
+    .locations-footer {
+        margin-top: 30px;
+        padding: 0 8px;
+        font-size: 15px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE VIEW
+========================================== */
+
+@media screen and (max-width: 380px) {
+    .locations-section {
+        padding: 55px 5%;
+    }
+
+    .location-card {
+        min-height: 490px;
+        padding: 28px 15px;
+    }
+
+    .location-card h3 {
+        font-size: 24px;
+    }
+
+    .qr-frame {
+        width: 145px;
+        height: 145px;
+    }
+
+    .location-button {
+        font-size: 10px;
+    }
+}
+
+
+/* =====================================================
+   FINAL RESPONSIVE CARD LAYOUT
+   Append this section at the very end of style.css.
+   Keeps the existing Royal Plum & Gold design.
+===================================================== */
+
+/* Keep every card inside its available space */
+.events-container,
+.location-container,
+.gallery {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.event-card,
+.location-card,
+.gallery-item {
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Celebration cards: balanced columns on laptop/desktop */
+.events-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 45px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: clamp(18px, 2.5vw, 30px);
+}
+
+.event-card {
+    height: 100%;
+    min-height: 0;
+    padding: clamp(28px, 3vw, 46px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-description {
+    min-height: 0;
+    max-width: 440px;
+}
+
+/* Location / QR cards */
+.locations-section {
+    width: 100%;
+    min-height: auto;
+    padding: clamp(65px, 7vw, 100px) 5%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.location-container {
+    width: 100%;
+    max-width: 1080px;
+    margin: clamp(32px, 4vw, 48px) auto 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 1fr));
+    align-items: stretch;
+    justify-content: center;
+    gap: clamp(18px, 2.5vw, 28px);
+}
+
+.location-card {
+    width: 100%;
+    max-width: 470px;
+    min-height: 0;
+    height: 100%;
+    margin: 0 auto;
+    padding: clamp(26px, 3vw, 40px) clamp(18px, 2.2vw, 28px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background: linear-gradient(145deg, #38243B, #201522);
+    border: 1px solid rgba(216, 180, 119, 0.55);
+    border-radius: 2px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+}
+
+.location-icon {
+    flex: 0 0 auto;
+}
+
+.location-card h3 {
+    margin: 14px 0 12px;
+    font-size: clamp(24px, 2.1vw, 30px);
+    line-height: 1.3;
+}
+
+.location-description {
+    width: 100%;
+    max-width: 330px;
+    min-height: 0;
+    margin: 0 auto;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.qr-frame {
+    width: clamp(145px, 14vw, 175px);
+    height: clamp(145px, 14vw, 175px);
+    max-width: 70%;
+    flex: 0 0 auto;
+    margin: 25px auto 15px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.qr-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qr-instruction {
+    margin: 12px 0 18px;
+    line-height: 1.7;
+}
+
+.location-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+    margin: 18px auto 0;
+    padding: 13px 18px;
+    line-height: 1.5;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* If there is only one location card, keep it centered */
+.location-container > .location-card:only-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/* Gallery cards */
+.gallery {
+    max-width: 1100px;
+    margin: 45px auto 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gallery-item img {
+    width: 100%;
+    height: clamp(240px, 28vw, 360px);
+    object-fit: cover;
+}
+
+/* Tablet and small laptop */
+@media (max-width: 900px) {
+    .locations-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .location-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 760px;
+        gap: 20px;
+    }
+
+    .location-card {
+        padding: 30px 18px;
+    }
+
+    .events-container {
+        max-width: 760px;
+        gap: 20px;
+    }
+
+    .event-card {
+        padding: 32px 22px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 600px) {
+    .events-container,
+    .location-container,
+    .gallery {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 430px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 20px;
+    }
+
+    .event-card,
+    .location-card {
+        width: 100%;
+        max-width: 100%;
+        min-height: 0;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .event-card h3,
+    .location-card h3 {
+        font-size: 26px;
+    }
+
+    .event-description,
+    .location-description {
+        min-height: 0;
+        font-size: 14px;
+    }
+
+    .qr-frame {
+        width: 165px;
+        height: 165px;
+        max-width: 65%;
+        margin: 22px auto 14px;
+    }
+
+    .location-button {
+        width: auto;
+        min-width: 150px;
+        margin-top: 18px;
+        padding: 13px 16px;
+        font-size: 10px;
+    }
+
+    .gallery {
+        gap: 16px;
+    }
+
+    .gallery-item img {
+        height: 280px;
+    }
+
+    .locations-footer {
+        max-width: 420px;
+        margin: 35px auto 0;
+        padding: 0 5px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+
+/* Very narrow phones */
+@media (max-width: 380px) {
+    .locations-section {
+        padding: 55px 5%;
+    }
+
+    .event-card,
+    .location-card {
+        padding: 26px 15px;
+    }
+
+    .event-card h3,
+    .location-card h3 {
+        font-size: 24px;
+    }
+
+    .qr-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    .gallery-item img {
+        height: 240px;
+    }
+}
+
+
+
+/* =========================================================
+   FINAL RESPONSIVE FIX — WEDDING CARDS
+   Keep this block at the VERY END of css/style.css
+========================================================= */
+
+/* Prevent overflow and make sizing predictable */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Center a single celebration card (your current HTML has one Nikah card) */
+.events-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 1000px;
+    margin: 45px auto 0;
+    gap: 28px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.events-container:has(.event-card:only-child) {
+    grid-template-columns: minmax(0, 520px);
+}
+
+.event-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    padding: clamp(28px, 4vw, 48px) clamp(20px, 3vw, 36px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.event-description {
+    min-height: 0;
+    max-width: 390px;
+}
+
+.event-value {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* Location / QR cards — your current HTML has one Nikah card */
+.locations-section {
+    width: 100%;
+    min-height: auto;
+    padding: clamp(60px, 7vw, 100px) 5%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.location-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 1000px;
+    margin: 45px auto 0;
+    gap: clamp(18px, 2.5vw, 30px);
+    justify-content: center;
+    align-items: stretch;
+}
+
+.location-container:has(.location-card:only-child) {
+    grid-template-columns: minmax(0, 470px);
+}
+
+.location-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    margin: 0 auto;
+    padding: clamp(28px, 3.5vw, 42px) clamp(18px, 2.5vw, 28px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    background: linear-gradient(145deg, #38243B, #201522);
+    border: 1px solid rgba(216, 180, 119, 0.55);
+    overflow-wrap: anywhere;
+    transition: transform .3s ease, border-color .3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    border-color: #D8B477;
+}
+
+.location-card h3 {
+    margin: 18px 0 12px;
+    font-size: clamp(25px, 2.2vw, 32px);
+    line-height: 1.3;
+}
+
+.location-description {
+    min-height: 0;
+    max-width: 320px;
+    line-height: 1.8;
+}
+
+.qr-frame {
+    width: clamp(145px, 16vw, 175px);
+    height: clamp(145px, 16vw, 175px);
+    flex: 0 0 auto;
+    padding: 8px;
+    margin: 28px auto 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #D8B477;
+    border-radius: 4px;
+}
+
+.qr-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qr-instruction {
+    line-height: 1.8;
+    margin: 12px 0 20px;
+}
+
+.location-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 44px;
+    margin-top: auto;
+    padding: 13px 20px;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+/* Keep all sections and text inside the viewport */
+section:not(.hero) {
+    min-height: auto;
+}
+
+.section-description,
+.locations-footer,
+.celebration-footer {
+    width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* Laptop and desktop */
+@media (min-width: 1025px) {
+    .events-container,
+    .location-container {
+        max-width: 1000px;
+    }
+
+    .location-container:not(:has(.location-card:only-child)) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .events-container {
+        max-width: 650px;
+        grid-template-columns: 1fr;
+    }
+
+    .events-container:has(.event-card:only-child) {
+        grid-template-columns: minmax(0, 560px);
+    }
+
+    .location-container {
+        max-width: 760px;
+        gap: 18px;
+    }
+
+    .location-card {
+        padding: 30px 18px;
+    }
+
+    .navbar {
+        gap: 14px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .nav-links {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 13px 5%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 14px;
+        padding-top: 5px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .events-container,
+    .events-container:has(.event-card:only-child),
+    .location-container,
+    .location-container:has(.location-card:only-child) {
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 430px;
+        gap: 22px;
+        margin: 32px auto 0;
+    }
+
+    .event-card,
+    .location-card {
+        width: 100%;
+        min-height: 0;
+        padding: 32px 20px;
+    }
+
+    .event-card h3,
+    .location-card h3 {
+        font-size: 26px;
+    }
+
+    .event-description,
+    .location-description {
+        min-height: 0;
+    }
+
+    .qr-frame {
+        width: 165px;
+        height: 165px;
+        margin: 24px auto 16px;
+    }
+
+    .location-button {
+        width: 100%;
+        max-width: 260px;
+        margin-top: 18px;
+    }
+
+    .locations-section {
+        padding: 62px 6%;
+    }
+
+    .locations-footer {
+        margin-top: 32px;
+        font-size: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+    .location-card,
+    .event-card {
+        padding: 27px 15px;
+    }
+
+    .location-card h3,
+    .event-card h3 {
+        font-size: 24px;
+    }
+
+    .qr-frame {
+        width: 150px;
+        height: 150px;
+    }
+
+    .nav-links {
+        gap: 7px 10px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
